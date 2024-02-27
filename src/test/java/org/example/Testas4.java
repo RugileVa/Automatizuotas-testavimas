@@ -1,6 +1,7 @@
 package org.example;
 
 import dev.failsafe.internal.util.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -60,7 +61,8 @@ public class Testas4 {
         // Implement the rest of the scenario steps
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    @Test
+    public void main() throws InterruptedException {
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\IdeaProjects\\chromedriver-win64\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
