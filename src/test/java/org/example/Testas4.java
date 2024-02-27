@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 //junit
 public class Testas4 {
@@ -64,7 +65,11 @@ public class Testas4 {
     @Test
     public void main() throws InterruptedException {
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\IdeaProjects\\chromedriver-win64\\chromedriver.exe");
-        ChromeDriver driver = new ChromeDriver();
+        // Create ChromeOptions object
+        ChromeOptions options = new ChromeOptions();
+        // Add arguments to enable headless mode
+        options.addArguments("--headless");
+        ChromeDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
 
         // 1. Atsidaryti https://demoqa.com
