@@ -4,7 +4,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh './mvw test --stacktrace'
+                    sh './mvnw test --stacktrace'
                 }
             }
         }
