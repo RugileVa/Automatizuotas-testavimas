@@ -24,7 +24,7 @@ public class Testas1 {
         // Spausti 'Gift Cards' kairiajame meniu
         driver.findElement(By.xpath("//a[@href='/gift-cards']")).click();
 
-//        // Pasirinkti prekę, kurios kaina didesnė nei 99
+       // Pasirinkti prekę, kurios kaina didesnė nei 99
         List<WebElement> giftItems = driver.findElements(By.xpath("//h2[@class='product-title']/a"));
         for (WebElement item : giftItems) {
             String linkText = item.getText();
@@ -60,11 +60,11 @@ public class Testas1 {
        WebElement jewelryLink = driver.findElement(By.linkText("Jewelry"));
        jewelryLink.click();
 
-       // Spausti 'Create Your Own Jewelry' nuorodą
+        // Spausti 'Create Your Own Jewelry' nuorodą
         WebElement createYourOwnJewelryLink = driver.findElement(By.linkText("Create Your Own Jewelry"));
         createYourOwnJewelryLink.click();
 
-//        // Pasirinkti reikšmę 'Material' silver ir length
+        // Pasirinkti reikšmę 'Material' silver ir length
         WebElement materialDropdown = driver.findElement(By.id("product_attribute_71_9_15"));
         materialDropdown.sendKeys("Silver 1mm");
 
@@ -89,11 +89,11 @@ public class Testas1 {
         WebElement addToWishlistJewelryButton = driver.findElement(By.xpath("//input[@value='Add to wishlist']"));
         addToWishlistJewelryButton.click();
 
-//        // Spausti nuorodą 'Wishlist' puslapio viršuje
+        // Spausti nuorodą 'Wishlist' puslapio viršuje
         WebElement wishlistLink = driver.findElement(By.linkText("Wishlist"));
         wishlistLink.click();
-//
-//        // Dabar galite paspausti varneles prekėms, kurias norite įdėti į krepšelį
+
+        // Dabar galite paspausti varneles prekėms, kurias norite įdėti į krepšelį
         List<WebElement> addToCartElements = driver.findElements(By.xpath("//td[@class='add-to-cart']/input[@name='addtocart']"));
 
         for (WebElement element : addToCartElements) {
